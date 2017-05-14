@@ -4,10 +4,12 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- * Created by Oleur on 22/12/2014.
- * Film list model
+ * Created by Oleur on 22/12/2014. Film list model
+ *
+ * @param <T>
  */
 public class SWModelList<T> implements Serializable {
+
     public int count;
     public String next;
     public String previous;

@@ -1,15 +1,15 @@
 package com.swapi.models;
 
 import com.google.gson.annotations.SerializedName;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- * Created by Oleur on 22/12/2014.
- * Species model represents a type of person or character within the Star Wars Universe.
+ * Created by Oleur on 22/12/2014. Species model represents a type of person or
+ * character within the Star Wars Universe.
  */
 public class Species implements Serializable {
+
     public String name;
     public String classification;
     public String designation;

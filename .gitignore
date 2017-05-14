@@ -22,3 +22,5 @@ proguard/
 
 # Log Files
 *.log
+/.nb-gradle/
+/target/

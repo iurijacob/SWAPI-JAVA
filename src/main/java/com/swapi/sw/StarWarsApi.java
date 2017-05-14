@@ -4,8 +4,7 @@ import com.swapi.APIConstants;
 import retrofit.RestAdapter;
 
 /**
- * Created by Oleur on 22/12/2014.
- * The Star Wars Api class
+ * Created by Oleur on 22/12/2014. The Star Wars Api class
  */
 public class StarWarsApi {
 

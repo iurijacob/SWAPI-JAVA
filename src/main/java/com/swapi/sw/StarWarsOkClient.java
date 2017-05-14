@@ -1,16 +1,13 @@
 package com.swapi.sw;
 
+import com.swapi.APIConstants;
+import java.io.IOException;
+import java.net.HttpURLConnection;
 import retrofit.client.OkClient;
 import retrofit.client.Request;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-
-import com.swapi.APIConstants;
-
 /**
- * Created by Oleur on 23/12/2014.
- * Star Wars OkClient
+ * Created by Oleur on 23/12/2014. Star Wars OkClient
  */
 public class StarWarsOkClient extends OkClient {
 
