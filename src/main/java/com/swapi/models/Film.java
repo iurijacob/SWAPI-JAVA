@@ -20,6 +20,7 @@ public class Film implements Serializable {
 
     public String director;
     public String producer;
+    public String release_date;
     public String url;
     public String created;
     public String edited;
