@@ -40,7 +40,7 @@ public class SwapiTests {
         StringJoiner joiner = new StringJoiner("\n", "", "");
 
         for (Film f : results) {
-            joiner.add("Title:" + f.title);
+            joiner.add("Title:" + f.getTitle());
         }
 
         Assert.assertEquals(MOVIES, joiner.toString());
