@@ -16,8 +16,7 @@ public interface StarWars {
     public void getRootUrls(Callback<Root> callback);
 
     @GET("people/")
-    public void getAllPeople(@Query("page") int page,
-            Callback<SWModelList<People>> callback);
+    public Call<SWModelList<People>> getAllPeople(@Query("page") int page);
 
     @GET("people/{id}/")
     public void getPeople(@Path("id") int peopleId,
@@ -31,32 +30,28 @@ public interface StarWars {
             Callback<Film> callback);
 
     @GET("starships")
-    public void getAllStarships(@Query("page") int page,
-            Callback<SWModelList<Starship>> callback);
+    public Call<SWModelList<Starship>> getAllStarships(@Query("page") int page);
 
     @GET("starships/{id}/")
     public void getStarship(@Path("id") int starshipId,
             Callback<Starship> callback);
 
     @GET("vehicles/")
-    public void getAllVehicles(@Query("page") int page,
-            Callback<SWModelList<Vehicle>> callback);
+    public Call<SWModelList<Vehicle>> getAllVehicles(@Query("page") int page);
 
     @GET("vehicles/{id}/")
     public void getVehicle(@Path("id") int vehicleId,
             Callback<Vehicle> callback);
 
     @GET("species/")
-    public void getAllSpecies(@Query("page") int page,
-            Callback<SWModelList<Species>> callback);
+    public Call<SWModelList<Species>> getAllSpecies(@Query("page") int page);
 
     @GET("species/{id}/")
     public void getSpecies(@Path("id") int speciesId,
             Callback<Species> callback);
 
     @GET("planets/")
-    public void getAllPlanets(@Query("page") int page,
-            Callback<SWModelList<Planet>> callback);
+    public Call<SWModelList<Planet>> getAllPlanets(@Query("page") int page);
 
     @GET("planets/{id}/")
     public void getPlanet(@Path("id") int planetId,
