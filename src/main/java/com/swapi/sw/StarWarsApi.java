@@ -1,11 +1,13 @@
 package com.swapi.sw;
 
 import com.swapi.APIConstants;
-import retrofit.RestAdapter;
+import okhttp3.OkHttpClient;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Created by Oleur on 22/12/2014.
- * The Star Wars Api class
+ *
+ * @author Zygimantus
  */
 public class StarWarsApi {
 
@@ -13,11 +15,13 @@ public class StarWarsApi {
     private static StarWarsApi sInstance;
 
     private StarWarsApi() {
-        final RestAdapter restAdapter = new RestAdapter.Builder()
-                .setClient(new StarWarsOkClient())
-                .setEndpoint(APIConstants.BASE_URL)
-                .setLogLevel(RestAdapter.LogLevel.FULL)
+
+        final Retrofit restAdapter = new Retrofit.Builder()
+                .baseUrl(APIConstants.BASE_URL)
+                .client(new OkHttpClient())
+                .addConverterFactory(GsonConverterFactory.create())
                 .build();
+
         mSwApi = restAdapter.create(StarWars.class);
     }
 

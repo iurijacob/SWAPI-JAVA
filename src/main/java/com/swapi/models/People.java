@@ -1,15 +1,15 @@
 package com.swapi.models;
 
 import com.google.gson.annotations.SerializedName;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- * Created by Oleur on 21/12/2014.
- * People model represents an individual person or character within the Star Wars universe.
+ * Created by Oleur on 21/12/2014. People model represents an individual person
+ * or character within the Star Wars universe.
  */
 public class People implements Serializable {
+
     public String name;
 
     @SerializedName("birth_year")

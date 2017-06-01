@@ -1,66 +1,60 @@
 package com.swapi.sw;
 
 import com.swapi.models.*;
-import retrofit.Callback;
-import retrofit.http.GET;
-import retrofit.http.Path;
-import retrofit.http.Query;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.http.GET;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 /**
- * Created by Oleur on 21/12/2014.
- * Star Wars API interface for making calls.
+ * Created by Oleur on 21/12/2014. Star Wars API interface for making calls.
  */
 public interface StarWars {
 
-    @GET("/")
+    @GET("")
     public void getRootUrls(Callback<Root> callback);
 
-    @GET("/people/")
-    public void getAllPeople(@Query("page") int page,
-                             Callback<SWModelList<People>> callback);
+    @GET("people/")
+    public Call<SWModelList<People>> getAllPeople(@Query("page") int page);
 
-    @GET("/people/{id}/")
+    @GET("people/{id}/")
     public void getPeople(@Path("id") int peopleId,
-                          Callback<People> callback);
+            Callback<People> callback);
 
-    @GET("/films/")
-    public void getAllFilms(@Query("page") int page,
-                            Callback<SWModelList<Film>> callback);
+    @GET("films/")
+    public Call<SWModelList<Film>> getAllFilms(@Query("page") int page);
 
-    @GET("/films/{id}/")
+    @GET("films/{id}/")
     public void getFilm(@Path("id") int filmId,
-                        Callback<Film> callback);
+            Callback<Film> callback);
 
-    @GET("/starships")
-    public void getAllStarships(@Query("page") int page,
-                                Callback<SWModelList<Starship>> callback);
+    @GET("starships")
+    public Call<SWModelList<Starship>> getAllStarships(@Query("page") int page);
 
-    @GET("/starships/{id}/")
+    @GET("starships/{id}/")
     public void getStarship(@Path("id") int starshipId,
-                            Callback<Starship> callback);
+            Callback<Starship> callback);
 
-    @GET("/vehicles/")
-    public void getAllVehicles(@Query("page") int page,
-                               Callback<SWModelList<Vehicle>> callback);
+    @GET("vehicles/")
+    public Call<SWModelList<Vehicle>> getAllVehicles(@Query("page") int page);
 
-    @GET("/vehicles/{id}/")
+    @GET("vehicles/{id}/")
     public void getVehicle(@Path("id") int vehicleId,
-                           Callback<Vehicle> callback);
+            Callback<Vehicle> callback);
 
-    @GET("/species/")
-    public void getAllSpecies(@Query("page") int page,
-                              Callback<SWModelList<Species>> callback);
+    @GET("species/")
+    public Call<SWModelList<Species>> getAllSpecies(@Query("page") int page);
 
-    @GET("/species/{id}/")
+    @GET("species/{id}/")
     public void getSpecies(@Path("id") int speciesId,
-                           Callback<Species> callback);
+            Callback<Species> callback);
 
-    @GET("/planets/")
-    public void getAllPlanets(@Query("page") int page,
-                              Callback<SWModelList<Planet>> callback);
+    @GET("planets/")
+    public Call<SWModelList<Planet>> getAllPlanets(@Query("page") int page);
 
-    @GET("/planets/{id}/")
+    @GET("planets/{id}/")
     public void getPlanet(@Path("id") int planetId,
-                          Callback<Planet> callback);
+            Callback<Planet> callback);
 
 }
