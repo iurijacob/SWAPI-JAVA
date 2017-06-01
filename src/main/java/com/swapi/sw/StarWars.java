@@ -47,8 +47,7 @@ public interface StarWars {
     public Call<SWModelList<Species>> getAllSpecies(@Query("page") int page);
 
     @GET("species/{id}/")
-    public void getSpecies(@Path("id") int speciesId,
-            Callback<Species> callback);
+    public Call<Species> getSpecies(@Path("id") int speciesId);
 
     @GET("planets/")
     public Call<SWModelList<Planet>> getAllPlanets(@Query("page") int page);
