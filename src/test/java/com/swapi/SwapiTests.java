@@ -18,7 +18,7 @@ import retrofit2.Response;
  */
 public class SwapiTests {
 
-    private static final String MOVIES = "Title:A New Hope\n"
+    private static final String FILMS = "Title:A New Hope\n"
             + "Title:Attack of the Clones\n"
             + "Title:The Phantom Menace\n"
             + "Title:Revenge of the Sith\n"
@@ -27,7 +27,7 @@ public class SwapiTests {
             + "Title:The Force Awakens";
 
     @Test
-    public void testOne() throws IOException {
+    public void filmsTest() throws IOException {
 
         StarWarsApi.init();
         StarWars api = StarWarsApi.getApi();
@@ -43,6 +43,6 @@ public class SwapiTests {
             joiner.add("Title:" + f.getTitle());
         }
 
-        Assert.assertEquals(MOVIES, joiner.toString());
+        Assert.assertEquals(FILMS, joiner.toString());
     }
 }
