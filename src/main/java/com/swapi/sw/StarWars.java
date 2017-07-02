@@ -1,6 +1,13 @@
 package com.swapi.sw;
 
-import com.swapi.models.*;
+import com.swapi.models.Film;
+import com.swapi.models.People;
+import com.swapi.models.Planet;
+import com.swapi.models.Root;
+import com.swapi.models.SWModelList;
+import com.swapi.models.Species;
+import com.swapi.models.Starship;
+import com.swapi.models.Vehicle;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.http.GET;
