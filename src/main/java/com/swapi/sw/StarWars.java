@@ -1,6 +1,13 @@
 package com.swapi.sw;
 
-import com.swapi.models.*;
+import com.swapi.models.Film;
+import com.swapi.models.People;
+import com.swapi.models.Planet;
+import com.swapi.models.Root;
+import com.swapi.models.SWModelList;
+import com.swapi.models.Species;
+import com.swapi.models.Starship;
+import com.swapi.models.Vehicle;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.http.GET;
@@ -47,8 +54,7 @@ public interface StarWars {
     public Call<SWModelList<Species>> getAllSpecies(@Query("page") int page);
 
     @GET("species/{id}/")
-    public void getSpecies(@Path("id") int speciesId,
-            Callback<Species> callback);
+    public Call<Species> getSpecies(@Path("id") int speciesId);
 
     @GET("planets/")
     public Call<SWModelList<Planet>> getAllPlanets(@Query("page") int page);

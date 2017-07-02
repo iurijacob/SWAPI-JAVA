@@ -35,12 +35,17 @@ public class SwapiTests {
         Call<SWModelList<Film>> films = api.getAllFilms(1);
 
         Response<SWModelList<Film>> response = films.execute();
-        ArrayList<Film> results = response.body().results;
 
         StringJoiner joiner = new StringJoiner("\n", "", "");
 
-        for (Film f : results) {
-            joiner.add("Title:" + f.getTitle());
+        SWModelList<Film> body = response.body();
+
+        if (body != null) {
+            ArrayList<Film> results = body.getResults();
+
+            for (Film f : results) {
+                joiner.add("Title:" + f.getTitle());
+            }
         }
 
         Assert.assertEquals(FILMS, joiner.toString());
