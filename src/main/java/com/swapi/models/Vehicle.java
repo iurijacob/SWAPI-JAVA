@@ -2,43 +2,47 @@ package com.swapi.models;
 
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.List;
+import lombok.Data;
 
 /**
- * Created by Oleur on 22/12/2014. Vehicle model represents a single transport
- * craft that does not have hyperdrive capability.
+ * Vehicle model represents a single transport craft that does not have
+ * hyperdrive capability.
+ *
+ * @author Zygimantus
  */
+@Data
 public class Vehicle implements Serializable {
 
-    public String name;
-    public String model;
+    private String name;
+    private String model;
 
     @SerializedName("vehicle_class")
-    public String vehicleClass;
+    private String vehicleClass;
 
-    public String manufacturer;
+    private String manufacturer;
 
     @SerializedName("cost_in_credits")
-    public String costInCredits;
+    private String costInCredits;
 
-    public String length;
-    public String crew;
-    public String passengers;
+    private String length;
+    private String crew;
+    private String passengers;
 
     @SerializedName("max_atmosphering_speed")
-    public String maxAtmospheringSpeed;
+    private String maxAtmospheringSpeed;
 
     @SerializedName("cargo_capacity")
-    public String cargoCapacity;
+    private String cargoCapacity;
 
-    public String consumables;
-    public String created;
-    public String edited;
-    public String url;
+    private String consumables;
+    private String created;
+    private String edited;
+    private String url;
 
     @SerializedName("pilots")
-    public ArrayList<String> pilotsUrls;
+    private List<String> pilotsUrls;
 
     @SerializedName("films")
-    public ArrayList<String> filmsUrls;
+    private List<String> filmsUrls;
 }

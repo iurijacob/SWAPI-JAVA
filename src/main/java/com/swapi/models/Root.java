@@ -2,23 +2,27 @@ package com.swapi.models;
 
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
+import lombok.Data;
 
 /**
- * Created by Oleur on 21/12/2014. Root model that provides information on all
- * avaiable resources within the API.
+ * Root model that provides information on all avaiable resources within the
+ * API.
+ *
+ * @author Zygimantus
  */
+@Data
 public class Root implements Serializable {
 
     @SerializedName("films")
-    public String filmsUrl;
+    private String filmsUrl;
     @SerializedName("people")
-    public String peopleUrl;
+    private String peopleUrl;
     @SerializedName("planets")
-    public String planetsUrl;
+    private String planetsUrl;
     @SerializedName("species")
-    public String speciesUrl;
+    private String speciesUrl;
     @SerializedName("starships")
-    public String starshipsUrl;
+    private String starshipsUrl;
     @SerializedName("vehicles")
-    public String vehiclesUrl;
+    private String vehiclesUrl;
 }
