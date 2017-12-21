@@ -2,36 +2,40 @@ package com.swapi.models;
 
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.List;
+import lombok.Data;
 
 /**
- * Created by Oleur on 22/12/2014. Planet model represents a large mass, planet
- * or planetoid in the Star Wars Universe, at the time of 0 ABY.
+ * Planet model represents a large mass, planet or planetoid in the Star Wars
+ * Universe, at the time of 0 ABY.
+ *
+ * @author Zygimantus
  */
+@Data
 public class Planet implements Serializable {
 
-    public String name;
-    public String diameter;
-    public String gravity;
-    public String population;
-    public String climate;
-    public String terrain;
-    public String created;
-    public String edited;
-    public String url;
+    private String name;
+    private String diameter;
+    private String gravity;
+    private String population;
+    private String climate;
+    private String terrain;
+    private String created;
+    private String edited;
+    private String url;
 
     @SerializedName("rotation_period")
-    public String rotationPeriod;
+    private String rotationPeriod;
 
     @SerializedName("orbital_period")
-    public String orbitalPeriod;
+    private String orbitalPeriod;
 
     @SerializedName("surface_water")
-    public String surfaceWater;
+    private String surfaceWater;
 
     @SerializedName("residents")
-    public ArrayList<String> residentsUrls;
+    private List<String> residentsUrls;
 
     @SerializedName("films")
-    public ArrayList<String> filmsUrls;
+    private List<String> filmsUrls;
 }

@@ -2,20 +2,26 @@ package com.swapi.models;
 
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
- * Created by Oleur on 22/12/2014. Starship model represents a single transport
- * craft that has hyperdrive capability.
+ * Starship model represents a single transport craft that has hyperdrive
+ * capability.
+ *
+ * @author Zygimantus
  */
+@Data
+@EqualsAndHashCode(callSuper = true)
 public class Starship extends Vehicle implements Serializable {
 
     @SerializedName("starship_class")
-    public String starshipClass;
+    private String starshipClass;
 
     @SerializedName("hyperdrive_rating")
-    public String hyperdriveRating;
+    private String hyperdriveRating;
 
     @SerializedName("MGLT")
-    public String mglt;
+    private String mglt;
 
 }

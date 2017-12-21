@@ -2,46 +2,50 @@ package com.swapi.models;
 
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.List;
+import lombok.Data;
 
 /**
- * Created by Oleur on 21/12/2014. People model represents an individual person
- * or character within the Star Wars universe.
+ * People model represents an individual person or character within the Star
+ * Wars universe.
+ *
+ * @author Zygimantus
  */
+@Data
 public class People implements Serializable {
 
-    public String name;
+    private String name;
 
     @SerializedName("birth_year")
-    public String birthYear;
+    private String birthYear;
 
     @SerializedName("films")
-    public ArrayList<String> filmsUrls;
+    private List<String> filmsUrls;
 
-    public String gender;
+    private String gender;
 
     @SerializedName("hair_color")
-    public String hairColor;
+    private String hairColor;
 
-    public String height;
+    private String height;
 
     @SerializedName("homeworld")
-    public String homeWorldUrl;
+    private String homeWorldUrl;
 
-    public String mass;
+    private String mass;
 
     @SerializedName("skin_color")
-    public String skinColor;
+    private String skinColor;
 
-    public String created;
-    public String edited;
-    public String url;
+    private String created;
+    private String edited;
+    private String url;
     @SerializedName("species")
-    public ArrayList<String> speciesUrls;
+    private List<String> speciesUrls;
 
     @SerializedName("starships")
-    public ArrayList<String> starshipsUrls;
+    private List<String> starshipsUrls;
 
     @SerializedName("vehicles")
-    public ArrayList<String> vehiclesUrls;
+    private List<String> vehiclesUrls;
 }
